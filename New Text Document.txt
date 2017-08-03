@@ -1,0 +1,55 @@
+var model = {
+                students: ko.observableArray(),
+                editor: {
+                    name: ko.observable(""),
+                    location: ko.observable("")
+                },
+                displaySummary: ko.observable(true)
+            };
+
+            function sendAjaxRequest(httpMethod, callback, url, reqData) {
+                $.ajax("/api/students" + (url ? "/" + url : ""), {
+                    type: httpMethod,
+                    success: callback,
+                    data: reqData
+                });
+            }
+
+            function getAllStudents() {
+                sendAjaxRequest("GET", function (data) {
+                    model.students.removeAll();
+                    for (var i = 0; i < data.length; i++) {
+                        model.students.push(data[i]);
+                    }
+                });
+            }
+
+            function removeStudent(student) {
+                sendAjaxRequest("DELETE", function () {
+                    for (var i = 0; i < model.students().length; i++) {
+                        if (model.students()[i].id == student.id) {
+                            model.students.remove(model.students()[i]);
+                            break;
+                        }
+                    }
+                }, student.id);
+            }
+
+            function handleCreateClick() {
+                model.displaySummary(false);
+            }
+
+            function handleEditorClick() {
+                sendAjaxRequest("POST", function (newStudent) {
+                    model.students.push(newStudent);
+                    model.displaySummary(true);
+                }, null, {
+                        FirstName: model.editor.firstName,
+                        LastName: model.editor.lastName
+                    });
+            }
+
+            $(document).ready(function () {
+                getAllStudents();
+                ko.applyBindings(model);
+            });

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css" />
+    <meta charset="utf-8" />
+    <title>Students</title>
+</head>
+<body class="w3-content" style="max-width: 260px;">
+    <br />
+    <input class="w3-input w3-animate-input w3-center"
+            style="width:50%; outline:none"
+            type="text"
+            placeholder="First name"
+            data-bind="value: firstName"/>
+    <br />
+    <input class="w3-input w3-animate-input w3-center"
+            type="text"
+            placeholder="Last name"
+            data-bind="value: lastName"
+            style="width:50%; outline:none" />
+    <p class="w3-center">
+        <button type="button"
+                class="w3-btn w3-white w3-round w3-border-green w3-border w3-text-green"
+                data-bind="click: onSubmit">
+            <span data-bind="if : editMode">Update</span>
+            <span data-bind="ifnot : editMode">Add</span>
+        </button>
+        <input type="button"
+                value="Delete"
+                class="w3-btn w3-white w3-text-red w3-round w3-border-red w3-border"
+                data-bind="enable : editMode, click: onDelete" />
+        <input type="button"
+                value="Clear"
+                class="w3-btn w3-white w3-text-blue w3-round w3-border-blue w3-border"
+                data-bind="click: onClear" />
+    </p>
+
+    <br />
+    <div data-bind="if: students().length > 0">
+        <ul class="w3-ul w3-border w3-round w3-border-grey w3-center"
+            data-bind="foreach: students">
+            <li class="w3-hover-grey" style="cursor: pointer" data-bind="click: onSelectedStudent">
+                <span style="display: none" data-bind="text: $data.id"></span>
+                <span data-bind="text: $data.firstName"></span>
+                <span data-bind="text: $data.lastName"></span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var model = {
+            id: ko.observable(),
+            firstName: ko.observable(""),
+            lastName: ko.observable(""),
+            editMode: ko.observable(false),
+            students: ko.observableArray([])
+        };
+
+        function onSelectedStudent(student) {
+            model.firstName(student.firstName());
+            model.lastName(student.lastName());
+            model.id(student.id());
+            model.editMode(true);
+        }
+
+        function onClear() {
+            model.firstName("");
+            model.lastName("");
+            model.id(0);
+            model.editMode(false);
+        }
+
+        function onDelete() {
+            var id = model.id();
+            for (var i = 0; i < model.students().length; i++) {
+                if (model.students()[i].id() == model.id()) {
+                    model.students.remove(model.students()[i]);
+                    onClear();
+                    break;
+                }
+            }
+            $.ajax({
+                url: `/api/students/${id}`,
+                type: "DELETE"
+            });
+        }
+        function onSubmit() {
+            var firstName = model.firstName();
+            var lastName = model.lastName();
+
+            if (model.editMode() == false) {
+                $.ajax({
+                    url: '/api/students',
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName
+                    }),
+                    success: function (data) {
+                        var student = {
+                            firstName: ko.observable(firstName),
+                            lastName: ko.observable(lastName),
+                            id: ko.observable(data)
+                        };
+                        model.students.push(student);
+                    }
+                });                               
+            }
+            else {
+                for (var i = 0; i < model.students().length; i++) {
+                    if (model.students()[i].id() == model.id()) {
+                        model.students()[i].firstName(model.firstName());
+                        model.students()[i].lastName(model.lastName());
+                    }
+                }
+                $.ajax({
+                    url: `/api/students/${model.id()}`,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    type: 'PUT',
+                    data: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName,
+                        id: model.id()
+                    })
+                });                  
+            }
+            onClear();
+        }
+        $.ajax({
+            url: '/api/students',
+            type: "GET",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var student = {
+                        firstName: ko.observable(data[i].firstName),
+                        lastName: ko.observable(data[i].lastName),
+                        id: ko.observable(data[i].id)
+                    }
+                    model.students.push(student);
+                }
+            }
+        });
+        ko.applyBindings(model);
+    </script>
+</body>
+
+</html>

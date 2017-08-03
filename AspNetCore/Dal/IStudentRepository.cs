@@ -8,7 +8,7 @@ namespace AspNetCore.Dal
 {
     public interface IStudentRepositoryService 
     {
-        void SaveStudent(Student student);
+        int InsertStudent(Student student);
         IEnumerable<Student> GetAllStudents();
         Student GetStudent(int id);
         void DeleteStudent(int id);

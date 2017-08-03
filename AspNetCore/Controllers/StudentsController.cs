@@ -26,14 +26,13 @@ namespace AspNetCore.Controllers
             ILogger<StudentsController> logger)
         {
             this.studentRepository = studentRepository;
-            if (this.studentRepository.GetAllStudents().Count() == 0)
-                studentRepository.SaveStudent(
-                    new Student { FirstName = "Andrii", LastName = "Mateishchuk" }
-                );
+            //if (this.studentRepository.GetAllStudents().Count() == 0)
+            //    studentRepository.InsertStudent(
+            //        new Student { FirstName = "Andrii", LastName = "Mateishchuk" }
+            //    );
             this.logger = logger;
             this.dateTimeService = dateTimeService;
-        }
-
+        }        
         // GET: api/values
         [HttpGet]
         public IActionResult Get()
@@ -63,9 +62,9 @@ namespace AspNetCore.Controllers
         {
             if (ModelState.IsValid)
             {
-                studentRepository.SaveStudent(student);
+                var id = studentRepository.InsertStudent(student);
                 logger.LogInformation($"{dateTimeService.GetTime()}: Inserting student");
-                return Ok();
+                return Ok(id);
             }
             logger.LogWarning($"{dateTimeService.GetTime()}: Invalid student model");
             return BadRequest();            
@@ -93,7 +92,7 @@ namespace AspNetCore.Controllers
             if (student != null)
             {
                 logger.LogInformation($"{dateTimeService.GetTime()}: Deleting student");
-                studentRepository.UpdateStudent(student);
+                studentRepository.DeleteStudent(id);
                 return Ok();
             }
             logger.LogWarning($"{dateTimeService.GetTime()}: Student not found");

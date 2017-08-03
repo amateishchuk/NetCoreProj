@@ -18,10 +18,11 @@ namespace AspNetCore.Dal
         }
 
 
-        public void SaveStudent(Student student)
+        public int InsertStudent(Student student)
         {
-            context.Entry(student).State = EntityState.Added;
+            studentEntity.Add(student);
             context.SaveChanges();
+            return student.Id;
         }
 
         public IEnumerable<Student> GetAllStudents()
@@ -40,8 +41,16 @@ namespace AspNetCore.Dal
             context.SaveChanges();
         }
         public void UpdateStudent(Student student)
-        {            
-            context.SaveChanges();
+        {
+            var stdInDb = studentEntity.Find(student.Id);
+
+            if (stdInDb != null)
+            {
+                context.Entry(stdInDb).CurrentValues.SetValues(student);
+                context.Entry(stdInDb).State = EntityState.Modified;
+                context.SaveChanges();
+            }            
+            
         }       
             
     }
