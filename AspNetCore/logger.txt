@@ -16401,3 +16401,1770 @@ Executing HttpStatusCodeResult, setting HTTP status code 200
 Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 22.9343ms
 Connection id "0HL6QOJCD3K2Q" completed keep alive response.
 Request finished in 28.747ms 200 
+Connection id "0HL6QOJCD3K2Q" received FIN.
+Connection id "0HL6QOJCD3K2R" started.
+Connection id "0HL6QOJCD3K2Q" disconnecting.
+Connection id "0HL6QOJCD3K2Q" sending FIN.
+Connection id "0HL6QOJCD3K2Q" sent FIN with status "0".
+Connection id "0HL6QOJCD3K2Q" stopped.
+Connection processing ended abnormally
+Connection id "0HL6QOJCD3K2R" disconnecting.
+Connection id "0HL6QOJCD3K2R" sending FIN.
+Connection id "0HL6QOJCD3K2R" sent FIN with status "0".
+Connection id "0HL6QOJCD3K2R" stopped.
+Connection id "0HL6QOJCD3K2S" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOJCD3K2S" completed keep alive response.
+Request finished in 4.7621ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '4889692f-db8f-4fbb-81b5-de0492501f6b' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:17:35 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 12.9504ms
+Connection id "0HL6QOJCD3K2S" completed keep alive response.
+Request finished in 18.8215ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/15006 application/json 53
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '21731336-cc49-4021-85e8-c7217ffcb878' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id 'f415d7b5-de36-4256-83e0-a38bfff8fc8e' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (15006, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:17:39 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 23.0607ms
+Connection id "0HL6QOJCD3K2S" completed keep alive response.
+Request finished in 32.0957ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOJCD3K2S" completed keep alive response.
+Request finished in 4.4617ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '4889692f-db8f-4fbb-81b5-de0492501f6b' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:17:44 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.156ms
+Connection id "0HL6QOJCD3K2S" completed keep alive response.
+Request finished in 14.8006ms 200 application/json; charset=utf-8
+Connection id "0HL6QOJCD3K2S" received FIN.
+Connection id "0HL6QOJCD3K2T" started.
+Connection id "0HL6QOJCD3K2S" disconnecting.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOJCD3K2T" completed keep alive response.
+Request finished in 17.4191ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '4889692f-db8f-4fbb-81b5-de0492501f6b' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:19:03 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 24.3016ms
+Connection id "0HL6QOJCD3K2T" completed keep alive response.
+Request finished in 36.9218ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/15006 application/json 51
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '21731336-cc49-4021-85e8-c7217ffcb878' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id 'f415d7b5-de36-4256-83e0-a38bfff8fc8e' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (15006, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (1ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:19:24 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 20.2658ms
+Connection id "0HL6QOJCD3K2T" completed keep alive response.
+Request finished in 31.2751ms 200 
+Hosting starting
+Hosting started
+Connection id "0HL6QOOCVN5NP" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 264.4175ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:19:35 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (280ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 5267.2693ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 5775.3094ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/15006 application/json 54
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (15006, AspNetCore.Models.Student) - ModelState is Valid
+Compiling query model: 
+'(from Student e in DbSet<Student>
+where Property(e, "Id") == __get_Item_0
+select e)
+.FirstOrDefault()'
+Optimized query model: 
+'(from Student e in DbSet<Student>
+where Property(e, "Id") == __get_Item_0
+select e)
+.FirstOrDefault()'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ToSequence(
+    element: Student FirstOrDefault(
+        source: IEnumerable<Student> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+                FROM [Student] AS [e]
+                WHERE [e].[Id] = @__get_Item_0
+            , 
+            shaper: BufferedEntityShaper<Student>
+        )
+    )
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (60ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (5ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:19:45 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 892.8477ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 905.6698ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 18.6941ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:19:46 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 14.0033ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 20.8919ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/15006  
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (15006) - ModelState is Valid
+Compiling query model: 
+'(from Student s in DbSet<Student>
+where s.Id == __id_0
+select s)
+.SingleOrDefault()'
+Optimized query model: 
+'(from Student s in DbSet<Student>
+where s.Id == __id_0
+select s)
+.SingleOrDefault()'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ToSequence(
+    element: Student SingleOrDefault(
+        source: IEnumerable<Student> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+                FROM [Student] AS [s]
+                WHERE [s].[Id] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<Student>
+        )
+    )
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:19:50 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (2ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 93.8916ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 102.6368ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 4.9417ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:20:31 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.6249ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 14.4862ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/14007 application/json 57
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (14007, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:20:35 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 26.2698ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 31.8363ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 3.9994ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:20:37 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.3123ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 13.4108ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 6.0301ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:21:21 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 10.8207ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 16.3499ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/14007 application/json 60
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (14007, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (1ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:21:26 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 16.1843ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 23.335ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 6.2195ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:21:29 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.0692ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 13.6338ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 6.0469ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:21:49 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 6.9114ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 13.9805ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/14007 application/json 63
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (14007, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:21:53 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 26.1042ms
+Connection id "0HL6QOOCVN5NP" completed keep alive response.
+Request finished in 31.8046ms 200 
+Connection id "0HL6QOOCVN5NP" received FIN.
+Connection id "0HL6QOOCVN5NP" disconnecting.
+Connection id "0HL6QOOCVN5NP" sending FIN.
+Connection id "0HL6QOOCVN5NP" sent FIN with status "0".
+Connection id "0HL6QOOCVN5NP" stopped.
+Connection id "0HL6QOOCVN5NQ" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NQ" completed keep alive response.
+Request finished in 6.0035ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:26:39 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 254.4564ms
+Connection id "0HL6QOOCVN5NQ" completed keep alive response.
+Request finished in 259.4262ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/14007 application/json 58
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (14007, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (2ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:26:44 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 20.8601ms
+Connection id "0HL6QOOCVN5NQ" completed keep alive response.
+Request finished in 30.064ms 200 
+Connection id "0HL6QOOCVN5NQ" received FIN.
+Connection id "0HL6QOOCVN5NQ" disconnecting.
+Connection id "0HL6QOOCVN5NR" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Connection id "0HL6QOOCVN5NQ" sending FIN.
+Connection id "0HL6QOOCVN5NQ" sent FIN with status "0".
+Connection id "0HL6QOOCVN5NQ" stopped.
+Connection id "0HL6QOOCVN5NR": An unhandled exception was thrown by the application.
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 10.197ms 500 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 4.8176ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:27:58 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 9.8933ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 16.341ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/14007  
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (14007) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (2ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:28:01 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (7ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 30.8641ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 38.8718ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 6.6249ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:28:03 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 10.3505ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 15.3464ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 6.3954ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:28:53 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.2171ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 15.2456ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:56422/api/students application/json 42
+POST requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '6758a266-437b-45df-9837-6efb6c4a359c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Post (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Post (AspNetCore) with arguments (AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Student]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:29:00 AM: Inserting student
+Executed action method AspNetCore.Controllers.StudentsController.Post (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Post (AspNetCore) in 129.4441ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 137.5489ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/16006 application/json 50
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (16006, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:29:05 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 111.7283ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 122.5281ms 200 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16006  
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16006) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:29:08 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 15.303ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 21.6896ms 200 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 7.4395ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:29:45 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.8633ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 14.5533ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:56422/api/students application/json 43
+POST requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '6758a266-437b-45df-9837-6efb6c4a359c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Post (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Post (AspNetCore) with arguments (AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Student]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:29:49 AM: Inserting student
+Executed action method AspNetCore.Controllers.StudentsController.Post (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Post (AspNetCore) in 15.5633ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 23.2608ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16007  
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16007) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:29:52 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 13.6105ms
+Connection id "0HL6QOOCVN5NR" completed keep alive response.
+Request finished in 18.5588ms 200 
+Connection id "0HL6QOOCVN5NR" disconnecting.
+Connection id "0HL6QOOCVN5NR" sending FIN.
+Connection id "0HL6QOOCVN5NR" sent FIN with status "0".
+Connection id "0HL6QOOCVN5NR" stopped.
+Connection id "0HL6QOOCVN5NS" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 9.7165ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:32:00 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 7.6051ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 14.3191ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:56422/api/students application/json 44
+POST requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '6758a266-437b-45df-9837-6efb6c4a359c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Post (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Post (AspNetCore) with arguments (AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Student]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:07 AM: Inserting student
+Executed action method AspNetCore.Controllers.StudentsController.Post (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Post (AspNetCore) in 14.495ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 20.7818ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/16008 application/json 50
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (16008, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:12 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 20.0335ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 26.3515ms 200 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16008 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16008) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:14 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 13.91ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 18.9026ms 200 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16008 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16008) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:15 AM: Student not found
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.BadRequestResult.
+Executing HttpStatusCodeResult, setting HTTP status code 400
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 6.283ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 11.0559ms 400 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16008 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16008) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:18 AM: Student not found
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.BadRequestResult.
+Executing HttpStatusCodeResult, setting HTTP status code 400
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 6.5792ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 12.9196ms 400 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16008 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16008) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:19 AM: Student not found
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.BadRequestResult.
+Executing HttpStatusCodeResult, setting HTTP status code 400
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 7.0592ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 12.5828ms 400 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16008 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16008) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:21 AM: Student not found
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.BadRequestResult.
+Executing HttpStatusCodeResult, setting HTTP status code 400
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 5.1176ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 10.2843ms 400 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 10.3976ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:32:51 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 7.0625ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 14.2772ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:56422/api/students application/json 44
+POST requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '6758a266-437b-45df-9837-6efb6c4a359c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Post (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Post (AspNetCore) with arguments (AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Student]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:32:58 AM: Inserting student
+Executed action method AspNetCore.Controllers.StudentsController.Post (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Post (AspNetCore) in 19.5772ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 26.0156ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/16009 application/json 51
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (16009, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:33:04 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 22.0829ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 33.1663ms 200 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16009 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16009) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:33:07 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 15.8796ms
+Connection id "0HL6QOOCVN5NS" completed keep alive response.
+Request finished in 21.7484ms 200 
+Connection id "0HL6QOOCVN5NS" received FIN.
+Connection id "0HL6QOOCVN5NS" disconnecting.
+Connection id "0HL6QOOCVN5NS" sending FIN.
+Connection id "0HL6QOOCVN5NS" sent FIN with status "0".
+Connection id "0HL6QOOCVN5NS" stopped.
+Connection id "0HL6QOOCVN5NT" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NT" completed keep alive response.
+Request finished in 7.3378ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:36:39 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 10.977ms
+Connection id "0HL6QOOCVN5NT" completed keep alive response.
+Request finished in 18.6031ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:56422/api/students application/json 45
+POST requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id '6758a266-437b-45df-9837-6efb6c4a359c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Post (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Post (AspNetCore) with arguments (AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Student]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:36:45 AM: Inserting student
+Executed action method AspNetCore.Controllers.StudentsController.Post (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Post (AspNetCore) in 10.985ms
+Connection id "0HL6QOOCVN5NT" completed keep alive response.
+Request finished in 18.1558ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:56422/api/students/16010 application/json 52
+PUT requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '782b5d02-9b25-4ad0-809a-fde0aac02401' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Put (AspNetCore)
+Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'.
+Executing action method AspNetCore.Controllers.StudentsController.Put (AspNetCore) with arguments (16010, AspNetCore.Models.Student) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName]
+FROM [Student] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Student] SET [FirstName] = @p0, [LastName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:36:49 AM: Updating student
+Executed action method AspNetCore.Controllers.StudentsController.Put (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Put (AspNetCore) in 19.378ms
+Connection id "0HL6QOOCVN5NT" completed keep alive response.
+Request finished in 25.2384ms 200 
+Request starting HTTP/1.1 DELETE http://localhost:56422/api/students/16010 application/json 
+DELETE requests are not supported
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Get (AspNetCore)' with id 'b2c03fbb-752d-41a2-a8cb-e123e051d2f9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id '8ced8c02-fd26-4499-a9fe-894adf64a7be' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Delete (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore) with arguments (16010) - ModelState is Valid
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/4/2017 2:36:53 AM: Deleting student
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'Unspecified'.
+Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Committing transaction.
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action method AspNetCore.Controllers.StudentsController.Delete (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action AspNetCore.Controllers.StudentsController.Delete (AspNetCore) in 16.2734ms
+Connection id "0HL6QOOCVN5NT" completed keep alive response.
+Request finished in 22.2592ms 200 
+Connection id "0HL6QOOCVN5NT" received FIN.
+Connection id "0HL6QOOCVN5NT" disconnecting.
+Connection id "0HL6QOOCVN5NT" sending FIN.
+Connection id "0HL6QOOCVN5NT" sent FIN with status "0".
+Connection id "0HL6QOOCVN5NT" stopped.
+Connection id "0HL6QOOCVN5NU" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 9.0601ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:44:46 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 256.6355ms
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 262.1101ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 3.4214ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:44:48 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 7.6191ms
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 13.2168ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 3.0999ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:44:49 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 6.4416ms
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 12.1886ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 3.1718ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '183cdf33-0483-4231-b6e0-b59b9603474d' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:44:51 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 9.5346ms
+Connection id "0HL6QOOCVN5NU" completed keep alive response.
+Request finished in 15.3035ms 200 application/json; charset=utf-8
+Hosting starting
+Hosting started
+Connection id "0HL6QP71DM2PP" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '9919314e-d431-4968-a1a8-b0e068e17a05' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 502.218ms
+Connection id "0HL6QP71DM2PP" completed keep alive response.
+Request finished in 1163.8673ms 200 application/json; charset=utf-8
+Hosting starting
+Hosting started
+Connection id "0HL6QP7EGFRDQ" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id 'd60d744b-f609-4606-9f45-460d9ab36da9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 602.4383ms
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 1199.4992ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 72.0344ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'd363c2fc-47b7-4246-848a-5f052d8047cf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:46:33 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (129ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 6047.6726ms
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 6061.0032ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 4.6194ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'd363c2fc-47b7-4246-848a-5f052d8047cf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:47:39 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 103.2848ms
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 111.2944ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 14.0887ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'd363c2fc-47b7-4246-848a-5f052d8047cf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:47:40 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.3408ms
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 24.3665ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 4.1818ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'd363c2fc-47b7-4246-848a-5f052d8047cf' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:47:41 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.9514ms
+Connection id "0HL6QP7EGFRDQ" completed keep alive response.
+Request finished in 15.882ms 200 application/json; charset=utf-8
+Hosting starting
+Connection id "0HL6QP873LDRI" started.
+Hosting started
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id 'effe40b3-1492-47d8-994f-dc4df527ffc7' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 472.7175ms
+Connection id "0HL6QP873LDRI" completed keep alive response.
+Request finished in 1066.7166ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QP873LDRI" completed keep alive response.
+Request finished in 70.2225ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '6f63f879-428b-4dbb-a3f3-d7dc09117da1' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:47:57 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (123ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 5680.0416ms
+Connection id "0HL6QP873LDRI" completed keep alive response.
+Request finished in 5690.5475ms 200 application/json; charset=utf-8
+Connection id "0HL6QP873LDRI" received FIN.
+Connection id "0HL6QP873LDRI" disconnecting.
+Connection id "0HL6QP873LDRI" sending FIN.
+Connection id "0HL6QP873LDRI" sent FIN with status "0".
+Connection id "0HL6QP873LDRI" stopped.
+Hosting starting
+Hosting started
+Connection id "0HL6QPA0P2Q2F" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '9db2130f-f35c-422b-9de2-81927616283e' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 479.3266ms
+Connection id "0HL6QPA0P2Q2F" completed keep alive response.
+Request finished in 1133.1413ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/  
+Request did not match any routes.
+Connection id "0HL6QPA0P2Q2F" completed keep alive response.
+Request finished in 21.4158ms 404 
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Request did not match any routes.
+Connection id "0HL6QPA0P2Q2F" completed keep alive response.
+Request finished in 6.5344ms 404 
+Hosting starting
+Hosting started
+Connection id "0HL6QPA6M98BV" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '873477dd-65d5-4877-b817-8ebace9fb21f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 568.0385ms
+Connection id "0HL6QPA6M98BV" completed keep alive response.
+Request finished in 1148.4597ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Request did not match any routes.
+Connection id "0HL6QPA6M98BV" completed keep alive response.
+Request finished in 18.6992ms 404 
+Hosting starting
+Hosting started
+Connection id "0HL6QPACABIFQ" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QPACABIFQ" completed keep alive response.
+Request finished in 309.6922ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '03d1a08f-4e5d-4262-8998-a661269572dc' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:51:46 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (143ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 6433.2089ms
+Connection id "0HL6QPACABIFQ" completed keep alive response.
+Request finished in 6866.5027ms 200 application/json; charset=utf-8
+Hosting starting
+Hosting started
+Connection id "0HL6QPB84C2T3" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '0a74afda-d272-467b-b22e-d6484168e36f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 481.6615ms
+Connection id "0HL6QPB84C2T3" completed keep alive response.
+Request finished in 1084.9606ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QPB84C2T3" completed keep alive response.
+Request finished in 84.7189ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '566fb80c-5443-4c0f-81ab-14985de28cec' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:53:26 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (80ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 5901.1269ms
+Connection id "0HL6QPB84C2T3" completed keep alive response.
+Request finished in 5912.4236ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QPB84C2T3" completed keep alive response.
+Request finished in 41.9335ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '566fb80c-5443-4c0f-81ab-14985de28cec' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:53:34 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 78.7728ms
+Connection id "0HL6QPB84C2T3" completed keep alive response.
+Request finished in 86.9951ms 200 application/json; charset=utf-8
+Hosting starting
+Hosting started
+Connection id "0HL6QPBPEEALK" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Connection id "0HL6QPBPEEALK" completed keep alive response.
+Request finished in 193.1509ms 404 
