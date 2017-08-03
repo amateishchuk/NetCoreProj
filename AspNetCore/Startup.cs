@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AspNetCore.CustomLogger;
+using AspNetCore.Dal;
+using AspNetCore.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using AspNetCore.Dal;
 using Microsoft.EntityFrameworkCore;
-using AspNetCore.Services;
-using AspNetCore.CustomLogger;
 using System.IO;
 
 namespace AspNetCore
@@ -35,7 +31,7 @@ namespace AspNetCore
             // Add framework services.
             services.AddMvc();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IStudentRepository, StudentRepository>();
+            services.AddTransient<IStudentRepositoryService, StudentRepository>();
             services.AddTransient<DateTimeService>();
 
         }
@@ -43,8 +39,7 @@ namespace AspNetCore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
-            var logger = loggerFactory.CreateLogger("FileLogger");
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));            
 
             app.UseMvc();
         }

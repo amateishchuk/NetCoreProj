@@ -10221,10 +10221,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amate\\Documents\\Visual Studio 2017\\Projects\\AspNetCore\\AspNetCore\\AspNetCore.csproj",
+      "projectUniqueName": "D:\\AspNetCore\\AspNetCore\\AspNetCore.csproj",
       "projectName": "AspNetCore",
-      "projectPath": "C:\\Users\\amate\\Documents\\Visual Studio 2017\\Projects\\AspNetCore\\AspNetCore\\AspNetCore.csproj",
-      "outputPath": "C:\\Users\\amate\\Documents\\Visual Studio 2017\\Projects\\AspNetCore\\AspNetCore\\obj\\",
+      "projectPath": "D:\\AspNetCore\\AspNetCore\\AspNetCore.csproj",
+      "outputPath": "D:\\AspNetCore\\AspNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.Dal
 {
-    public interface IStudentRepository 
+    public interface IStudentRepositoryService 
     {
         void SaveStudent(Student student);
         IEnumerable<Student> GetAllStudents();

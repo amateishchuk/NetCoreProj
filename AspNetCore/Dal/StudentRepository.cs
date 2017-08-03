@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCore.Dal
 {
-    public class StudentRepository : IStudentRepository
+    public class StudentRepository : IStudentRepositoryService
     {
         private ApplicationContext context;
         private DbSet<Student> studentEntity;

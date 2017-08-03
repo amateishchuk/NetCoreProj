@@ -1,43 +1,25 @@
 Hosting starting
+Connection id "0HL6Q671BD4RL" started.
 Hosting started
-Connection id "0HL6PRVOQ9B49" started.
 Request starting HTTP/1.1 GET http://localhost:56422/api/values  
 Request successfully matched the route with name '(null)' and template 'api/Values'.
-Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '75f466ba-a3b6-40fc-9fd4-e8abf1349a91' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '5e18e8a0-1246-4345-bb42-df46fe2c14cb' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
 Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
 Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
 Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
-Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 1378.7335ms
-Connection id "0HL6PRVOQ9B49" completed keep alive response.
-Request finished in 2834.3379ms 200 application/json; charset=utf-8
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 1037.8637ms
+Connection id "0HL6Q671BD4RL" completed keep alive response.
+Request finished in 3426.2713ms 200 application/json; charset=utf-8
 Request starting HTTP/1.1 GET http://localhost:56422/favicon.ico  
 Request did not match any routes.
-Connection id "0HL6PRVOQ9B49" completed keep alive response.
-Request finished in 23.3275ms 404 
+Connection id "0HL6Q671BD4RL" completed keep alive response.
+Request finished in 20.6162ms 404 
 Request starting HTTP/1.1 GET http://localhost:56422/api/students  
 Request successfully matched the route with name '(null)' and template 'api/Students'.
-Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '02e04f2a-f292-4ee1-bd86-0a057116027a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
-Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 1531.3243ms
-Connection id "0HL6PRVOQ9B49": An unhandled exception was thrown by the application.
-Connection id "0HL6PRVOQ9B49" completed keep alive response.
-Request finished in 1551.6984ms 500 
-Hosting starting
-Hosting started
-Connection id "0HL6PS040UHAM" started.
-Request starting HTTP/1.1 GET http://localhost:56422/api/students  
-Request successfully matched the route with name '(null)' and template 'api/Students'.
-Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'bf86efec-238c-4053-925c-0afccc9607b1' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
-Hosting starting
-Connection id "0HL6PS06J9NG3" started.
-Hosting started
-Request starting HTTP/1.1 GET http://localhost:56422/api/students  
-Request successfully matched the route with name '(null)' and template 'api/Students'.
-Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'f3eca88b-c152-4d9f-8407-8ded61c36e25' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '741bd34c-0879-4df9-ae47-9464c68a7311' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
 Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
 Compiling query model: 
 'from Student <generated>_0 in DbSet<Student>
@@ -56,43 +38,48 @@ TRACKED: True
 )
 
 Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (223ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[FirstName], [s].[LastName]
 FROM [Student] AS [s]
 Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/3/2017 8:38:28 AM
 Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
 Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[FirstName], [s].[LastName]
 FROM [Student] AS [s]
 Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 16372.6861ms
-Connection id "0HL6PS06J9NG3" completed keep alive response.
-Request finished in 16976.2992ms 200 application/json; charset=utf-8
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 23974.0067ms
+Connection id "0HL6Q671BD4RL" completed keep alive response.
+Request finished in 23993.8588ms 200 application/json; charset=utf-8
+Connection id "0HL6Q671BD4RL" received FIN.
+Connection id "0HL6Q671BD4RL" disconnecting.
+Connection id "0HL6Q671BD4RL" sending FIN.
+Connection id "0HL6Q671BD4RL" sent FIN with status "0".
+Connection id "0HL6Q671BD4RL" stopped.
 Hosting starting
 Hosting started
-Connection id "0HL6PS0I680NT" started.
+Connection id "0HL6Q6D0EGJJ0" started.
 Request starting HTTP/1.1 GET http://localhost:56422/api/values  
 Request successfully matched the route with name '(null)' and template 'api/Values'.
-Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '2ee1e00a-1838-4432-a3b5-24048e7427d9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '5177a9fd-a933-4665-ba1c-8b00eb18a9f1' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
 Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
 Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
 Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
-Connection id "0HL6PS0I680NU" started.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 515.5785ms
+Connection id "0HL6Q6D0EGJJ0" completed keep alive response.
+Request finished in 1254.2362ms 200 application/json; charset=utf-8
 Request starting HTTP/1.1 GET http://localhost:56422/api/students  
 Request successfully matched the route with name '(null)' and template 'api/Students'.
-Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '2d31dc06-c85b-4614-82fd-63fddf805130' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'c65d13d6-b63b-460e-b974-6153a7e94ffa' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
 Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
-Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 518.7233ms
-Connection id "0HL6PS0I680NT" completed keep alive response.
-Request finished in 1162.137ms 200 application/json; charset=utf-8
 Compiling query model: 
 'from Student <generated>_0 in DbSet<Student>
 select <generated>_0'
@@ -110,20 +97,94 @@ TRACKED: True
 )
 
 Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (91ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (214ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[FirstName], [s].[LastName]
 FROM [Student] AS [s]
 Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
 Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/3/2017 8:48:49 AM: Getting Data
 Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[FirstName], [s].[LastName]
 FROM [Student] AS [s]
 Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
-Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 5974.253ms
-Connection id "0HL6PS0I680NU" completed keep alive response.
-Request finished in 5990.8586ms 200 application/json; charset=utf-8
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 7585.3159ms
+Connection id "0HL6Q6D0EGJJ0" completed keep alive response.
+Request finished in 7600.6618ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/api/students/1  
+Request successfully matched the route with name '(null)' and template 'api/Students/{id}'.
+Action 'AspNetCore.Controllers.StudentsController.Put (AspNetCore)' with id 'eecc0abd-cf60-4f83-bc2c-37a7ccdf431e' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'AspNetCore.Controllers.StudentsController.Delete (AspNetCore)' with id '4b8b7fa3-ce4b-47c9-8b09-ac3813e3440a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments (1) - ModelState is Valid
+Compiling query model: 
+'(from Student s in DbSet<Student>
+where s.Id == __id_0
+select s)
+.SingleOrDefault()'
+Optimized query model: 
+'(from Student s in DbSet<Student>
+where s.Id == __id_0
+select s)
+.SingleOrDefault()'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ToSequence(
+    element: Student SingleOrDefault(
+        source: IEnumerable<Student> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+                FROM [Student] AS [s]
+                WHERE [s].[Id] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<Student>
+        )
+    )
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (210ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+WHERE [s].[Id] = @__id_0
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+8/3/2017 8:48:54 AM: Getting student
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 1412.9262ms
+Connection id "0HL6Q6D0EGJJ0" completed keep alive response.
+Request finished in 1423.852ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/api/students  
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id 'c65d13d6-b63b-460e-b974-6153a7e94ffa' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/3/2017 8:48:56 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 13.5373ms
+Connection id "0HL6Q6D0EGJJ0" completed keep alive response.
+Request finished in 20.8354ms 200 application/json; charset=utf-8
