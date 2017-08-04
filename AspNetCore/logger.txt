@@ -18168,3 +18168,150 @@ Request starting HTTP/1.1 GET http://localhost:56422/api/values
 The request path /api/values does not match a supported file type
 Connection id "0HL6QPBPEEALK" completed keep alive response.
 Request finished in 193.1509ms 404 
+Hosting starting
+Hosting started
+Connection id "0HL6QPCKOMQC9" started.
+Request starting HTTP/1.1 GET http://localhost:56422/  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QPCKOMQC9" completed keep alive response.
+Request finished in 227.491ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '78d7986a-2cc6-4a9c-8615-718edfdf017a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:55:49 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Compiling query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+Optimized query model: 
+'from Student <generated>_0 in DbSet<Student>
+select <generated>_0'
+TRACKED: True
+(QueryContext queryContext) => IEnumerable<Student> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+        FROM [Student] AS [s]
+    , 
+    shaper: UnbufferedEntityShaper<Student>
+)
+
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (96ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 5609.7985ms
+Connection id "0HL6QPCKOMQC9" completed keep alive response.
+Request finished in 6061.0238ms 200 application/json; charset=utf-8
+Connection id "0HL6QPCKOMQC9" received FIN.
+Connection id "0HL6QPCKOMQCA" started.
+Connection id "0HL6QPCKOMQC9" disconnecting.
+Connection processing ended abnormally
+Connection id "0HL6QPCKOMQCA" disconnecting.
+Connection id "0HL6QPCKOMQCA" sending FIN.
+Connection id "0HL6QPCKOMQC9" sending FIN.
+Connection id "0HL6QPCKOMQC9" sent FIN with status "0".
+Connection id "0HL6QPCKOMQCA" sent FIN with status "0".
+Connection id "0HL6QPCKOMQCA" stopped.
+Connection id "0HL6QPCKOMQC9" stopped.
+Connection id "0HL6QPCKOMQCB" started.
+Request starting HTTP/1.1 GET http://localhost:56422/index.html  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 7.3825ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '78d7986a-2cc6-4a9c-8615-718edfdf017a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:57:31 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 81.2994ms
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 88.5663ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/  
+Sending file. Request path: '/index.html'. Physical path: 'D:\AspNetCore\AspNetCore\wwwroot\index.html'
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 35.4905ms 200 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '78d7986a-2cc6-4a9c-8615-718edfdf017a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:57:58 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 9.4025ms
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 16.2771ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:56422/  
+The file /index.html was not modified
+Handled. Status code: 304 File: /index.html
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 4.3535ms 304 text/html
+Request starting HTTP/1.1 GET http://localhost:56422/api/students application/json 
+The request path /api/students does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Students'.
+Action 'AspNetCore.Controllers.StudentsController.Post (AspNetCore)' with id '78d7986a-2cc6-4a9c-8615-718edfdf017a' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.StudentsController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.StudentsController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+8/4/2017 2:58:03 AM: Getting Data
+Executed action method AspNetCore.Controllers.StudentsController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Opening connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[FirstName], [s].[LastName]
+FROM [Student] AS [s]
+Closing connection to database 'appDb' on server '(localdb)\mssqllocaldb'.
+Executed action AspNetCore.Controllers.StudentsController.Get (AspNetCore) in 8.1481ms
+Connection id "0HL6QPCKOMQCB" completed keep alive response.
+Request finished in 14.0243ms 200 application/json; charset=utf-8
+Connection id "0HL6QPCKOMQCB" received FIN.
+Connection id "0HL6QPCKOMQCB" disconnecting.
+Connection id "0HL6QPCKOMQCB" sending FIN.
+Connection id "0HL6QPCKOMQCB" sent FIN with status "0".
+Connection id "0HL6QPCKOMQCB" stopped.
+Hosting starting
+Hosting started
+Connection id "0HL6QPFG654SR" started.
+Request starting HTTP/1.1 GET http://localhost:56422/api/values  
+The request path /api/values does not match a supported file type
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'AspNetCore.Controllers.ValuesController.Post (AspNetCore)' with id '68b7291f-8867-4aad-b9a8-ae9eee7633a6' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action AspNetCore.Controllers.ValuesController.Get (AspNetCore)
+Executing action method AspNetCore.Controllers.ValuesController.Get (AspNetCore) with arguments ((null)) - ModelState is Valid
+Executed action method AspNetCore.Controllers.ValuesController.Get (AspNetCore), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+No information found on request to perform content negotiation.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action AspNetCore.Controllers.ValuesController.Get (AspNetCore) in 467.8373ms
+Connection id "0HL6QPFG654SR" completed keep alive response.
+Request finished in 1030.6383ms 200 application/json; charset=utf-8
